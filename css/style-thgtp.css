@@ -1,0 +1,21 @@
+#testimonials > .overlay-sec {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#features {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.margin-bottom {
+    margin-bottom: 50px;
+}
+
+#funfacts {
+    margin-bottom: 0px;
+}
+
+.offer-features img {
+    margin-bottom: 20px;
+}
