@@ -744,7 +744,7 @@
 
     function checkSampleSent (data) {
       $("[id=sample-submit-alert]").detach();
-      if(data == "Mail is on its way!") {
+      if(data.status == "created") {
         $("#FormSuccess").modal();
         ga('send', 'event', 'THGTP', 'SampleSent', 'OK');
         $.getScript("https://www.googleadservices.com/pagead/conversion.js");
@@ -762,12 +762,20 @@
         event.preventDefault()
         var subscribe_course = $("#input-course").prop("checked");
         $.ajax({
-            url: "https://julien.danjou.info/stork/send-sample",
+            url: "https://api.convertkit.com/landing_pages/37725/subscribe",
             type: 'POST',
             data: JSON.stringify({
+                action: "subscribe",
+                course: "Python lessons",
+                course_opted: $("#input-course").prop("checked") ? "true" : "false",
                 email: $("#input-email").val(),
-                firstname: $("#input-firstname").val(),
-                course: subscribe_course
+                first_name: $("#input-firstname").val(),
+                fname: $("#input-firstname").val(),
+                form: "THGTP sample chapter",
+                id: "37725",
+                message: "created",
+                status: "created",
+                subscription_status: "active"
             }),
             contentType: "application/json; charset=utf-8",
             success: checkSampleSent,
