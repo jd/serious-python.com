@@ -114,12 +114,12 @@ $(document).ready(function(){
   prefix : '',
   suffix : ''
   }
-  var count01 = new countUp("count01", 0, 271, 0, 3, options);
+  var count01 = new countUp("count01", 0, 290, 0, 3, options);
   var count02 = new countUp("count02", 0, 8, 0, 4, options);
-  var count03 = new countUp("count03", 0, 14, 0, 5, options);
+  var count03 = new countUp("count03", 0, 17, 0, 5, options);
     var count04 = new countUp("count04", 0, 70, 0, 2.5, options);
-    var count05 = new countUp("count05", 0, 2, 0, 1, options);
-    var count06 = new countUp("count06", 0, 456, 0, 4, options);
+    var count05 = new countUp("count05", 0, 3, 0, 1, options);
+    var count06 = new countUp("count06", 0, 537, 0, 4, options);
 
     $('#count01').on('inview', function(event, isInView, visiblePartX, visiblePartY) {if (isInView) {count01.start();} return false;});
     $('#count02').on('inview', function(event, isInView, visiblePartX, visiblePartY) {if (isInView) {count02.start();} return false;});
