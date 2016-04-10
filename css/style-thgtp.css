@@ -19,3 +19,10 @@
 .offer-features img {
     margin-bottom: 20px;
 }
+
+.avatar {
+    border-radius: 50%;
+    max-width: 100%;
+    border: 1px solid #666666;
+    margin: 20px auto 20px;
+}
