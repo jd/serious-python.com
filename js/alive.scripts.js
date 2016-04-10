@@ -101,22 +101,6 @@ $(document).ready(function(){
     items: 6,
     });
   
-  ///// SMOOTH SCROLL FIX
-  $(function() {
-    $('a[href*=#]:not([href=#])').filter(":not(#tabs *)").click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top
-          }, 1000);
-          return false;
-        }
-      }
-    });
-  });
-  
   ///// BUTTONS DEPRESSED FIX
   $(".btn").mouseup(function(){$(this).blur();});
   $("#navbar .navbar-nav *").mouseup(function(){$(this).blur();});
