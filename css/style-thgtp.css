@@ -1,6 +1,7 @@
 #testimonials > .overlay-sec {
     padding-top: 50px;
     padding-bottom: 50px;
+    background: rgba(0, 0, 0, 0.6);
 }
 
 #features {
