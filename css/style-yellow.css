@@ -661,7 +661,7 @@ fieldset[disabled] .btn {
 ------------------------------------------------------------------*/
 /*     5.1. Main header styles & layout-1 styles     */
 #header {
-  background: url(../img/header/bg03-yellow.jpg) fixed;
+  background: url(../img/header/bg03-yellow.jpg);
   height: 100vh;
   max-height: 890px;
   min-height: 690px;
