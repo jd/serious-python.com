@@ -37,3 +37,11 @@ h2 {
     display: block;
     color: #999999;
 }
+
+#header {
+    margin-bottom: 0;
+}
+
+#about {
+    margin: 0
+}
