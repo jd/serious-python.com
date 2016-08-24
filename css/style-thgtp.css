@@ -31,3 +31,9 @@
 h2 {
     margin-bottom: 80px;
 }
+
+.personal span {
+    width: 100%;
+    display: block;
+    color: #999999;
+}
