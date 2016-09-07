@@ -40,8 +40,19 @@ h2 {
 
 #header {
     margin-bottom: 0;
+    min-height: 250px;
+    max-height: 300px;
+    text-align: center;
 }
 
 #about {
     margin: 0
+}
+
+.about-img {
+    text-align: center;
+}
+
+#testimonials .person span {
+    color: #ccc;
 }
