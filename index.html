@@ -737,7 +737,6 @@
      ga('linker:autoLink', ['gumroad.com'] );
 
     function checkSampleSent (data) {
-      $("[id=sample-submit-alert]").detach();
       if(data.status == "created") {
         $("#FormSuccess").modal();
         ga('send', 'event', 'THGTP', 'SampleSent', 'OK');
