@@ -786,7 +786,12 @@
     }
 
     $(function () {
-        $("form#get-sample").submit(sendSample);
+        $('form#get-sample').validator().on('submit', function (e) {
+            if (!e.isDefaultPrevented()) {
+                return sendSample(e);
+            }
+        });
+
         $("a#link-chapter").click(function () {
             ga('send', 'event', 'THGTP', 'SampleDownloaded', 'OK');
             twttr.conversion.trackPid('l5r3o', { tw_sale_amount: 0, tw_order_quantity: 0});
