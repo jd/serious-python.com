@@ -56,3 +56,8 @@ h2 {
 #testimonials .person span {
     color: #ccc;
 }
+
+.special-offer {
+    color: #ff9c3f;
+    // font-style: italic;
+}
