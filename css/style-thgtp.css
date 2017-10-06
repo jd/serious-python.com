@@ -57,6 +57,10 @@ h2 {
     color: #ccc;
 }
 
+#testimonials p {
+    font-size: 1.8em;
+}
+
 .special-offer {
     color: #ff9c3f;
     // font-style: italic;
