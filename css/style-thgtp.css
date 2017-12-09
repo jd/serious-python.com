@@ -65,3 +65,12 @@ h2 {
     color: #ff9c3f;
     // font-style: italic;
 }
+
+
+#contact button {
+    padding-bottom: 40px;
+}
+
+.ck_checkbox {
+    margin: 20px;
+}

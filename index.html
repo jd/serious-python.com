@@ -447,47 +447,7 @@
             </div>
           </div>
           <div class="col-sm-5">
-            <form class="form-horizontal" id="get-sample" role="form" data-toggle="validator">
-              <div class="form-group inline-input">
-
-                <div class="input-group col-xs-12">
-                  <div class="input-group-addon"><span class="elegant icon_profile"></span></div>
-                  <input type="text" class="form-control" id="input-firstname"
-                         placeholder="first name">
-                </div>
-
-                <br/>
-
-                <div class="input-group col-xs-12">
-                  <div class="input-group-addon"><span class="elegant icon_mail_alt"></span></div>
-                  <input type="email" class="form-control" id="input-email" placeholder="e-mail address" required>
-                </div>
-
-                <!-- ERROR MESSAGE BOX -->
-                <div class="help-block with-errors"></div>
-
-                <br/>
-
-                <div class="checkbox input-group col-xs-12">
-                  <label>
-                    <input type="checkbox" id="input-course"
-                           style="margin-top: -20px;" checked>
-                    Yes, I'd like to receive a free 30 days
-                    course on how I can make the most out of Python.
-                  </label>
-                </div>
-              </div>
-
-              <div class="form-group col-xs-12">
-                <button type="submit" class="btn btn-success col-xs-10">
-                  <span class="icon_check"></span>
-                  Get the chapter by email
-                </button>
-              </div>
-
-              <div class="help-block with-errors"></div>
-
-            </form>
+            <script async id="_ck_37725" src="https://forms.convertkit.com/37725?v=6"></script>
           </div>
         </div>
       </div>
@@ -764,68 +724,6 @@
     <script type="text/javascript">
      ga('require', 'linker');
      ga('linker:autoLink', ['gumroad.com'] );
-
-    function checkSampleSent (data) {
-      if(data.status == "created") {
-        $("#FormSuccess").modal();
-        ga('send', 'event', 'THGTP', 'SampleSent', 'OK');
-        $.getScript("https://www.googleadservices.com/pagead/conversion.js");
-      } else {
-        $("#FormFailure").modal();
-        ga('send', 'event', 'THGTP', 'SampleSent', 'ERROR');
-      }
-    }
-
-    function sampleSentFailure () {
-        $("#FormFailure").modal();
-    }
-
-    function sendSample(event) {
-        event.preventDefault()
-        var subscribe_course = $("#input-course").prop("checked");
-        $.ajax({
-            url: "https://api.convertkit.com/landing_pages/37725/subscribe",
-            type: 'POST',
-            data: JSON.stringify({
-                action: "subscribe",
-                course: "Python lessons",
-                course_opted: $("#input-course").prop("checked") ? "true" : "false",
-                email: $("#input-email").val(),
-                first_name: $("#input-firstname").val(),
-                fname: $("#input-firstname").val(),
-                form: "THGTP sample chapter",
-                id: "37725",
-                message: "created",
-                status: "created",
-                subscription_status: "active"
-            }),
-            contentType: "application/json; charset=utf-8",
-            success: checkSampleSent,
-            error: sampleSentFailure
-        });
-
-        // Track the chapter sent
-        twttr.conversion.trackPid('l5r3o', { tw_sale_amount: 0, tw_order_quantity: 0});
-
-        if(subscribe_course) {
-            twttr.conversion.trackPid('l5r3p', { tw_sale_amount: 0,
-                                                 tw_order_quantity: 0 });
-            ga('send', 'event', 'THGTP', 'Python course', 'OK');
-        }
-    }
-
-    $(function () {
-        $('form#get-sample').validator().on('submit', function (e) {
-            if (!e.isDefaultPrevented()) {
-                return sendSample(e);
-            }
-        });
-
-        $("a#link-chapter").click(function () {
-            ga('send', 'event', 'THGTP', 'SampleDownloaded', 'OK');
-            twttr.conversion.trackPid('l5r3o', { tw_sale_amount: 0, tw_order_quantity: 0});
-        });
-    });
     </script>
 
   </body>
