@@ -1,8 +1,6 @@
-css/animations/animations.min.css
-css/icons/elegant.min.css
-css/plugins/plugins.min.css
-css/style-thgtp.min.css
-css/style-yellow.min.css
-js/alive.scripts.min.js
-js/smoothscroll.min.js
-js/validator.min.js
+css/bootstrap.min.css
+css/custom.min.css
+css/iconsmind.min.css
+css/stack-interface.min.css
+css/theme-greensea.min.css
+js/scripts.min.js

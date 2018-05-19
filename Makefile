@@ -7,9 +7,9 @@ css/%.min.css: css/%.css
 js/%.min.js: js/%.js
 	uglifyjs $< > $@
 
-pub: css/style-thgtp.min.css css/style-yellow.min.css css/animations/animations.min.css css/plugins/plugins.min.css css/icons/elegant.min.css js/smoothscroll.min.js js/validator.min.js js/alive.scripts.min.js
+pub: css/bootstrap.min.css css/custom.min.css css/iconsmind.min.css css/stack-interface.min.css css/theme-greensea.min.css js/scripts.min.js
 	aws s3 --region $(REGION) sync . $(BUCKET) --exclude ".git/*" --delete
-	aws cloudfront create-invalidation --distribution-id E3IFJMLHLU3JKA --paths /index.html /css/style-thgtp.min.css /special/index.html
+	aws cloudfront create-invalidation --distribution-id E3IFJMLHLU3JKA --paths /index.html /css/custom.min.css
 
 clean-pub:
 	aws s3 rm --recursive --region $(REGION) $(BUCKET)
