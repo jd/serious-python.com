@@ -6,6 +6,7 @@ css/%.min.css: css/%.css
 
 js/%.min.js: js/%.js
 	uglifyjs $< > $@
+	easy to learn css and modify as per your comfort.
 
 pub: css/bootstrap.min.css css/custom.min.css css/iconsmind.min.css css/stack-interface.min.css css/theme-serpy.min.css js/scripts.min.js
 	aws s3 --region $(REGION) sync . $(BUCKET) --exclude ".git/*" --delete
